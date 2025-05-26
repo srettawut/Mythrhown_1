@@ -12,7 +12,7 @@ public class NoteObject : MonoBehaviour
 
     public GameObject middleBottomPosition;
 
-
+    
 
     // Start is called before the first frame update
     void Start()
@@ -26,7 +26,7 @@ public class NoteObject : MonoBehaviour
         if (Input.GetKeyDown(keyToPress))
         {
             if (canBePressed)
-            {
+            {               
                 GameManager.instance.tapSound.Play();
                 gameObject.SetActive(false);
 
@@ -76,6 +76,34 @@ public class NoteObject : MonoBehaviour
             canBePressed = false;
 
             //GameManager.instance.NoteMissed();
+        }
+    }
+    public void TrySimulateKey(KeyCode key)
+    {
+        if (canBePressed && keyToPress == key)
+        {
+            SimulateKeyPress(); // เรียกของตัวเอง
+        }
+    }
+    public void SimulateKeyPress()
+    {
+        if (canBePressed)
+        {
+            GameManager.instance.tapSound.Play();
+            gameObject.SetActive(false);
+
+            if (transform.position.y < -2.6f && transform.position.y > -3.2f)
+            {
+                Debug.Log("Perfect Hit");
+                GameManager.instance.PerfectHit();
+                Instantiate(perfectEffect, transform.position, perfectEffect.transform.rotation);
+            }
+            else
+            {
+                Debug.Log("Good Hit");
+                GameManager.instance.GoodHit();
+                Instantiate(goodEffect, transform.position, goodEffect.transform.rotation);
+            }
         }
     }
 }

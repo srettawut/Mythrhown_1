@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    public SimpleJoystick joystick;
+
     public float jumpForce = 200f;
     public float moveSpeed;
 
@@ -18,6 +20,8 @@ public class PlayerController : MonoBehaviour
     private float dashingPower = 35.0f;
     private float dashingTime = 0.2f;
     private float dashingCooldown = 0.1f;
+
+    private bool overrideDirection = false;
 
     [SerializeField] private TrailRenderer tr;
 
@@ -42,10 +46,27 @@ public class PlayerController : MonoBehaviour
             animator.SetTrigger("Jump");
 
         }*/
+        
+        float moveX = joystick != null ? joystick.Horizontal : Input.GetAxisRaw("Horizontal");
+        float inputMagnitude = joystick != null ? joystick.Input.magnitude : Mathf.Abs(Input.GetAxisRaw("Horizontal"));
+
+        if (inputMagnitude >= 0.98f)
+        {
+            moveSpeed = boostSpeed;
+        }
+        else
+        {
+            moveSpeed = normalSpeed;
+        }
+
+        float direction = Mathf.Sign(moveX);
+        rb.velocity = new Vector2(direction * moveSpeed, rb.velocity.y);
+        
         if (isDashing)
         {
             return;
         }
+        /*
         if (Input.GetKey(KeyCode.Space))
         {
             moveSpeed = boostSpeed;
@@ -54,6 +75,7 @@ public class PlayerController : MonoBehaviour
         {
             moveSpeed = normalSpeed;
         }
+        */
         if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
             transform.localScale = new Vector3(-1, 1, 1);
@@ -64,30 +86,35 @@ public class PlayerController : MonoBehaviour
             transform.localScale = new Vector3(1, 1, 1);
             animator.SetTrigger("Shoot");
         }
+        /*
         if (Input.GetButtonDown("Fire1") && grounded)
         {
             animator.SetTrigger("Shoot");
         }
+        */
         else if (Input.GetKeyDown(KeyCode.Alpha1) && grounded)
         {
             animator.SetTrigger("Happy");
-        }     
+        }
+
         
 
-        float moveX = Input.GetAxisRaw("Horizontal");
-       
         rb.velocity = new Vector2(moveX * moveSpeed, rb.velocity.y);
         animator.SetFloat("Speed", Mathf.Abs(moveX));
 
         animator.SetBool("IsWalking", moveX != 0);
-        if (Input.GetKey(KeyCode.D))
+        if (!overrideDirection)
         {
-            transform.localScale = new Vector3(1, 1, 1);
+            if (moveX > 0.01f)
+            {
+                transform.localScale = new Vector3(1, 1, 1);
+            }
+            else if (moveX < 0.0f)
+            {
+                transform.localScale = new Vector3(-1, 1, 1);
+            }
         }
-        else if (Input.GetKey(KeyCode.A))
-        {
-            transform.localScale = new Vector3(-1, 1, 1);
-        }         
+                 
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             Debug.Log("1 key pressed!");
@@ -142,6 +169,28 @@ public class PlayerController : MonoBehaviour
         yield return new WaitForSeconds(dashingCooldown);
         canDash = true;
 
+    }
+
+    public void ShootLeft()
+    {
+        overrideDirection = true;
+        transform.localScale = new Vector3(-1, 1, 1);
+        animator.SetTrigger("Shoot");
+        StartCoroutine(ResetDirectionOverride());
+    }
+    
+    public void ShootRight()
+    {
+        overrideDirection = true;
+        transform.localScale = new Vector3(1, 1, 1);
+        animator.SetTrigger("Shoot");
+        StartCoroutine(ResetDirectionOverride());
+    }
+
+    IEnumerator ResetDirectionOverride()
+    {
+        yield return new WaitForSeconds(0.2f);
+        overrideDirection = false;
     }
 }
 

@@ -253,4 +253,15 @@ public class GameManager : MonoBehaviour
         PauseScreen.SetActive(false);
     }
 
+    public void OnVirtualKeyPressed(string key)
+    {
+        KeyCode keyCode = (KeyCode)System.Enum.Parse(typeof(KeyCode), key);
+        NoteObject[] notes = FindObjectsOfType<NoteObject>(); // หรือใช้ List เก็บไว้
+
+        foreach (NoteObject note in notes)
+        {
+            note.TrySimulateKey(keyCode);
+        }
+    }
+
 }
