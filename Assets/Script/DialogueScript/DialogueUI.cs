@@ -8,6 +8,13 @@ public class DialogueUI : MonoBehaviour
     [SerializeField] private TMP_Text textLabel;
     [SerializeField] private DialogueObject testDialogue;
 
+    [Header("GAME STORY")]
+    [SerializeField] private DialogueObject Chapter1;
+    [SerializeField] private DialogueObject Chapter2;
+    [SerializeField] private DialogueObject Chapter3;
+    [SerializeField] private DialogueObject Chapter4;
+    [SerializeField] private DialogueObject Chapter5;
+
     public bool IsOpen { get; private set; }
 
     private ResponseHandler responseHandler;

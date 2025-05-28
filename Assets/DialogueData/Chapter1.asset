@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de104f8fc44cd984c886ab95b3545c0e, type: 3}
+  m_Name: Chapter1
+  m_EditorClassIdentifier: 
+  dialogue:
+  - This city is called "Mythrhown". The city where there is no sun light.
+  - I have arrived to this city 2 weeks ago....
+  - and I have to say... I kinda like this city, people here are just different.
+    Not same as my hometown at all.
+  - I have a part time job at this little cafe here in the middle of the city.
+  - You know... money don't make it's self.
+  - There are many good things about this city but the downside iss this city is
+    full of danger.
+  - That is  because this city has no laws..
+  - The only rule that everyone in this city know is that "Do not trust anyone"
+  - But I already broke that rule by trusting someone..
+  - And that person is of course.... "My BOSS"
+  - CONTINUE IN CHAPTER 2...
+  responses: []
