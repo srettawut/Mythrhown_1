@@ -26,7 +26,7 @@ public class ResponseHandler : MonoBehaviour
 
         optionText.gameObject.SetActive(false);//i added
 
-        foreach(Response response in responses)
+        foreach (Response response in responses)
         {
             GameObject responseButton = Instantiate(responseButtonTemplate.gameObject, responseContainer);
             responseButton.gameObject.SetActive(true);
@@ -38,7 +38,7 @@ public class ResponseHandler : MonoBehaviour
             responseBoxHeight += responseButtonTemplate.sizeDelta.y;
         }
 
-        responseBox.sizeDelta = new Vector2(responseBox.sizeDelta.x,responseBoxHeight);
+        responseBox.sizeDelta = new Vector2(responseBox.sizeDelta.x, responseBoxHeight);
         responseBox.gameObject.SetActive(true);
     }
 
@@ -46,7 +46,7 @@ public class ResponseHandler : MonoBehaviour
     {
         responseBox.gameObject.SetActive(false);
 
-        foreach(GameObject button in tempResponseButtons)
+        foreach (GameObject button in tempResponseButtons)
         {
             Destroy(button);
         }
