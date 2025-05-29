@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de104f8fc44cd984c886ab95b3545c0e, type: 3}
+  m_Name: 3-Sure
+  m_EditorClassIdentifier: 
+  dialogue:
+  - 'Mr Manager
+
+    "Thank you, I owe you"'
+  - 'Mr Manager
+
+    "They entered the cave.."'
+  responses:
+  - responseText: the cave?!
+    dialogueObject: {fileID: 11400000, guid: f5e79803250662443af083a2fe4b99bd, type: 2}
+  - responseText: what cave?!
+    dialogueObject: {fileID: 11400000, guid: 4bbee98a9ddbe9f4eaf5ed67c8bbdc87, type: 2}

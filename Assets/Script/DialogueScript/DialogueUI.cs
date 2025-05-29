@@ -88,6 +88,8 @@ public class DialogueUI : MonoBehaviour
 
     private void CloseDialogueBox()
     {
+        playerImage.SetActive(false);
+        cafebossImage.SetActive(false);
         IsOpen = false;       
         dialogueBox.SetActive(false);
         textLabel.text = string.Empty;
@@ -95,23 +97,33 @@ public class DialogueUI : MonoBehaviour
 
     public void playChapter1()
     {
+        playerImage.SetActive(true);
         storyPanal.SetActive(false);
         ShowDialogue(Chapter1);
     }
     public void playChapter2()
     {
-
+        playerImage.SetActive(true);
+        storyPanal.SetActive(false);
+        ShowDialogue(Chapter2);
     }
     public void playChapter3()
     {
-
+        playerImage.SetActive(true);
+        cafebossImage.SetActive(true);
+        storyPanal.SetActive(false);
+        ShowDialogue(Chapter3);
     }
     public void playChapter4()
     {
-
+        playerImage.SetActive(true);
+        storyPanal.SetActive(false);
+        ShowDialogue(Chapter4);
     }
     public void playChapter5()
     {
-
+        playerImage.SetActive(true);
+        storyPanal.SetActive(false);
+        ShowDialogue(Chapter5);
     }
 }

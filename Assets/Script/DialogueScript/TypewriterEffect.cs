@@ -11,7 +11,7 @@ public class TypewriterEffect : MonoBehaviour
 
     private readonly Dictionary<HashSet<char>, float> punctuations = new Dictionary<HashSet<char>, float>()
     {
-        {new HashSet<char>(){'.','!','?'},0.6f },
+        {new HashSet<char>(){'.'},0.6f },
         {new HashSet<char>(){',',';',':'},0.3f },
     };
     private Coroutine typingCoroutine;

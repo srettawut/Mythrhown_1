@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de104f8fc44cd984c886ab95b3545c0e, type: 3}
+  m_Name: Chapter4
+  m_EditorClassIdentifier: 
+  dialogue:
+  - Our cafe located in the safe zone
+  - The cave is a path way to enter the "The Dark Zone"
+  - The dark zone is the suburb of this city
+  - There are uncountable amount of monster and danger
+  - I once passed that zone to enter this city
+  - Now I can't believe I will have to go to that place again
+  - But I have to go save Mr Manager's daughter
+  - I guess I really can't avoid it
+  - First I need to prepare some weapon
+  - CONTINUE IN CHAPTER 5
+  responses: []

@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de104f8fc44cd984c886ab95b3545c0e, type: 3}
+  m_Name: Chapter3
+  m_EditorClassIdentifier: 
+  dialogue:
+  - '"Heyyy are you alright!??"'
+  - '*MR MANAGER SLOWY OPEN HIS EYES'
+  - '"Oh thanks goddd, you are okay"'
+  - '"What happened!?, wherer is everyone?"
+
+
+'
+  - 'Mr Manager:
+
+    "They have arrived"'
+  - '"Who arrived?"'
+  - 'Mr Manager
+
+    "The dark notes, they kidnapped my daughter"'
+  - 'Mr Manager:
+
+    "Please go save her"'
+  responses:
+  - responseText: Sure
+    dialogueObject: {fileID: 11400000, guid: c650fd9fdc8cc7b43b7922ab747ad924, type: 2}
+  - responseText: How?
+    dialogueObject: {fileID: 11400000, guid: 96de42dd8bfdc484fb9a72012aa54340, type: 2}

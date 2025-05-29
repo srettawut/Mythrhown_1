@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de104f8fc44cd984c886ab95b3545c0e, type: 3}
+  m_Name: Chapter5
+  m_EditorClassIdentifier: 
+  dialogue:
+  - '*AT THE GATE OF THE CAVE'
+  - '"Okay me, let''s do this"'
+  - '*YOU ARE ABOUT TO ENTER THE CAVE'
+  - '???:
+
+    "Not so fast little kid"
+
+'
+  - '???:
+
+    "Trust me you won''t survive in there"
+
+'
+  responses:
+  - responseText: Who r u?
+    dialogueObject: {fileID: 11400000, guid: ea69eb664edfe794aa7e964e4036a4bb, type: 2}
+  - responseText: Why?
+    dialogueObject: {fileID: 11400000, guid: 0327e191fc82e264e954306a5a803a53, type: 2}
