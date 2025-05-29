@@ -15,6 +15,11 @@ public class DialogueUI : MonoBehaviour
     [SerializeField] private DialogueObject Chapter4;
     [SerializeField] private DialogueObject Chapter5;
 
+    [Header("WHILE READING")]
+    [SerializeField] private GameObject storyPanal;
+    [SerializeField] private GameObject playerImage;
+    [SerializeField] private GameObject cafebossImage;
+
     public bool IsOpen { get; private set; }
 
     private ResponseHandler responseHandler;
@@ -60,6 +65,7 @@ public class DialogueUI : MonoBehaviour
         }
         else
         {
+            storyPanal.SetActive(true);
             CloseDialogueBox();
         }
     }
@@ -82,13 +88,30 @@ public class DialogueUI : MonoBehaviour
 
     private void CloseDialogueBox()
     {
-        IsOpen = false;
+        IsOpen = false;       
         dialogueBox.SetActive(false);
         textLabel.text = string.Empty;
     }
 
-    public void ShowTT()
+    public void playChapter1()
     {
-        ShowDialogue(testDialogue);
+        storyPanal.SetActive(false);
+        ShowDialogue(Chapter1);
+    }
+    public void playChapter2()
+    {
+
+    }
+    public void playChapter3()
+    {
+
+    }
+    public void playChapter4()
+    {
+
+    }
+    public void playChapter5()
+    {
+
     }
 }
