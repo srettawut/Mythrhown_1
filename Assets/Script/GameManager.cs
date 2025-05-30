@@ -237,7 +237,7 @@ public class GameManager : MonoBehaviour
             PauseGame();
         }
     }
-    private void PauseGame()
+    public void PauseGame()
     {
         isPaused = true;
         theMusic.Pause();

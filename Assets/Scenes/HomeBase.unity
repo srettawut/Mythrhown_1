@@ -5176,7 +5176,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 1a12fef5dbab9c649b1e1357fa7146a2, type: 3}
+  m_audioClip: {fileID: 8300000, guid: ced2c2c47b774b74890d79d8b0d6a7e4, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.109
   m_Pitch: 1
@@ -6916,16 +6916,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
+      - m_Target: {fileID: 1060965066}
+        m_TargetAssemblyTypeName: SceneManagerScript, Assembly-CSharp
+        m_MethodName: LoadScene
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: GamePlay3
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1254721012
@@ -7405,9 +7405,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: dd83a09b9bba5e74997a1eac093c1389, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 2763209d889f16b4ba9ce9930342c69a, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.14
+  m_Volume: 0.088
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -7544,7 +7544,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: GamePlay
+          m_StringArgument: GamePlay2
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1380071662
@@ -8233,9 +8233,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: dd83a09b9bba5e74997a1eac093c1389, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 355c6c4d6f82fc64597f34edda8df473, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.14
+  m_Volume: 0.083
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -8617,9 +8617,9 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1254721010}
-  - {fileID: 744075199}
   - {fileID: 1380071659}
   - {fileID: 1462223609}
+  - {fileID: 744075199}
   - {fileID: 518806944}
   m_Father: {fileID: 1404249848}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -8961,7 +8961,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1658834597
 MonoBehaviour:
   m_ObjectHideFlags: 0
